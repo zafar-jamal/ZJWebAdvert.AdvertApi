@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AdvertApi.Models;
+using ZJAdvertApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using ZJWebAdvert.AdvertApi.Services;
 
@@ -54,6 +54,7 @@ namespace ZJWebAdvert.AdvertApi.Controllers
             try
             {
                 await _advertStorageService.Confirm(model);
+                await RaiseAdvertConfirmdMessage();
             }
             catch (KeyNotFoundException)
             {
@@ -65,6 +66,11 @@ namespace ZJWebAdvert.AdvertApi.Controllers
             }
 
             return new OkResult();
+        }
+
+        private Task RaiseAdvertConfirmdMessage()
+        {
+            throw new NotImplementedException();
         }
     }
 }

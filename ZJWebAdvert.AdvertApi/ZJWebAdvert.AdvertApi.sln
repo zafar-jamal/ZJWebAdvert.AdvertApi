@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZJWebAdvert.AdvertApi", "ZJWebAdvert.AdvertApi.csproj", "{D3BCB08D-F728-41DD-9A9E-239AC6D799CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvertApi.Models", "..\AdvertApi.Models\AdvertApi.Models.csproj", "{87FB057B-CB40-4830-B659-D8099F80DF3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZJAdvertApi.Models", "..\AdvertApi.Models\ZJAdvertApi.Models.csproj", "{87FB057B-CB40-4830-B659-D8099F80DF3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

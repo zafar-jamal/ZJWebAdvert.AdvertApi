@@ -1,4 +1,4 @@
-﻿using AdvertApi.Models;
+﻿using ZJAdvertApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +10,6 @@ namespace ZJWebAdvert.AdvertApi.Services
     {
         Task<string> Add(AdvertModel model);
         Task Confirm(ConfirmAdvertModel model);
+        Task<bool> CheckHealthAsync();
     }
 }

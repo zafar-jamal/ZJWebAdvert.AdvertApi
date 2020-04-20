@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Zafar</Authors>
+    <Product>ZJWeb Advert Microservices</Product>
+    <Company>IT247Pro</Company>
+    <PackageProjectUrl>https://github.com/zafar-jamal/ZJWebAdvert.AdvertApi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zafar-jamal/ZJWebAdvert.AdvertApi</RepositoryUrl>
+    <PackageId>ZJAdvertApi.Models</PackageId>
+  </PropertyGroup>
+
+</Project>

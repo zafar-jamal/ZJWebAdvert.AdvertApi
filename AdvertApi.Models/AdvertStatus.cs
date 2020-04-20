@@ -1,6 +1,6 @@
 ﻿
 
-namespace AdvertApi.Models
+namespace ZJAdvertApi.Models
 {
     public enum AdvertStatus
     {

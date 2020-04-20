@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvertApi.Models
+namespace ZJAdvertApi.Models
 {
     public class AdvertModel
     {

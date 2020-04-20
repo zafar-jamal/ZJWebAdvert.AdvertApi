@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
 using ZJWebAdvert.AdvertApi.Services;
+using ZJWebAdvert.AdvertApi.HealthChecks;
 
 namespace ZJWebAdvert.AdvertApi
 {
@@ -30,7 +31,12 @@ namespace ZJWebAdvert.AdvertApi
             services.AddAutoMapper(typeof(Startup));
             services.AddTransient<IAdvertStorageService, DynamoDBAdvertStorage>();
             services.AddControllers();
-            
+            //services.AddHealthChecks(checks =>
+            //{
+            //    checks.AddCheck<StorageHealthCheck>("Storage", new System.TimeSpan(0, 1, 0));
+            //});
+            services.AddHealthChecks();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +57,7 @@ namespace ZJWebAdvert.AdvertApi
             {
                 endpoints.MapControllers();
             });
+            app.UseHealthChecks("/health");
         }
     }
 }

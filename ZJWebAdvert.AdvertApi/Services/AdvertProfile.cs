@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AdvertApi.Models;
+using ZJAdvertApi.Models;
 using AutoMapper;
 
 namespace ZJWebAdvert.AdvertApi.Services

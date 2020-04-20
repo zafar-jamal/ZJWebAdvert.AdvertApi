@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdvertApi.Models
+namespace ZJAdvertApi.Models
 {
     public class CreateAdvertResponse
     {

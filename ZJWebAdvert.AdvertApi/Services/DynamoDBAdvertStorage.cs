@@ -1,11 +1,11 @@
-﻿using AdvertApi.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
+using ZJAdvertApi.Models;
 
 namespace ZJWebAdvert.AdvertApi.Services
 {
@@ -35,7 +35,16 @@ namespace ZJWebAdvert.AdvertApi.Services
             return dbModel.Id;
         }
 
-       public async Task Confirm(ConfirmAdvertModel model)
+        public async Task<bool> CheckHealthAsync()
+        {
+            using (var client = new AmazonDynamoDBClient())
+            {
+                var tabledata = await client.DescribeTableAsync("Adverts");
+                return string.Compare(tabledata.Table.TableStatus, "active", true) == 0;
+            }
+        }
+
+        public async Task Confirm(ConfirmAdvertModel model)
         {
             using (var client=new AmazonDynamoDBClient())
             {
